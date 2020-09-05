@@ -31,7 +31,7 @@
                 <Button Content="Сохранить изменения"   Command="{Binding Path=SaveCompaniesChangesCommand}"/>
                 <Button Content="Удалить"               Command="{Binding Path=DeleteCompanyCommand}"/>
             </StackPanel>
-            <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" 
+            <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" SelectionMode="Single" 
                       AutoGenerateColumns="False" ItemsSource="{Binding Path=Companies}"
                       SelectedItem="{Binding Path=SelectedCompany, Mode=TwoWay}">
                 <DataGrid.Columns>
@@ -52,7 +52,7 @@
                 <Button Content="Удалить"               Command="{Binding Path=DeleteUserCommand}"/>
             </StackPanel>
             <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" 
-                      AutoGenerateColumns="False"
+                      AutoGenerateColumns="False" SelectionMode="Single"
                       ItemsSource="{Binding Path=Users}" 
                       SelectedItem="{Binding Path=SelectedUser, Mode=TwoWay}">
                 <DataGrid.Columns>
